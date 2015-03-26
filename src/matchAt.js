@@ -30,8 +30,8 @@ function matchAt(re: RegExp, str: string, pos: number): any {
   var reloc = getRelocatable(re);
   reloc.lastIndex = pos;
   var match: Array<string> = reloc.exec(str);
-  // Last capturing group indicates our sentinel that indicates whether the
-  // regex matched at the given location.
+  // Last capturing group is our sentinel that indicates whether the regex
+  // matched at the given location.
   if (match[match.length - 1] == null) {
     // Original regex matched.
     match.length = match.length - 1;
