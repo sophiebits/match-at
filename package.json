@@ -1,7 +1,14 @@
 {
   "name": "match-at",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Relocatable regular expressions.",
+  "repository": "spicyj/match-at",
+  "main": "lib/matchAt.js",
+  "files": [
+    "lib/"
+  ],
   "devDependencies": {
+    "babel": "^4.7.16",
     "jest-cli": "^0.4.0",
     "react-tools": "^0.13.1"
   },
@@ -12,6 +19,7 @@
     ]
   },
   "scripts": {
+    "prepublish": "babel -d lib/ src/",
     "test": "jest"
   }
 }
